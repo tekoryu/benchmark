@@ -1,7 +1,21 @@
 [project]
 name = "benchmark"
-version = "0.1.0"
-description = "Add your description here"
+version = "2.0.0"
+description = "ML/AI Benchmark Showdown: Dell G3 3590 vs MacBook M4 Pro"
 readme = "README.md"
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "numpy>=1.26",
+    "scikit-learn>=1.4",
+    "pandas>=2.2",
+    "psutil>=5.9",
+    "matplotlib>=3.8",
+]
+
+[project.optional-dependencies]
+cuda = ["torch>=2.2"]
+mps = ["torch>=2.2"]
+
+[project.scripts]
+benchmark = "ml_ai_benchmark:main"
+visualize = "visualize:main"
