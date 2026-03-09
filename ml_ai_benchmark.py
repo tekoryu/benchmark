@@ -299,13 +299,13 @@ class MLBenchmark:
         })
         
         start = time.perf_counter()
-        
+
         # Operações típicas de ML
         result1 = df.groupby('D')[['A', 'B', 'C']].mean()
         result2 = df[['A', 'B', 'C']].corr()
         result3 = df.describe()
-        result4 = df.apply(lambda x: x.std() if x.dtype != 'object' else None)
-        
+        result4 = df.select_dtypes(include='number').std()
+
         elapsed = time.perf_counter() - start
         
         print(f"   Operações: groupby, correlação, describe, std")

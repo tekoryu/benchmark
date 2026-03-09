@@ -1,0 +1,47 @@
+{
+  "system_info": {
+    "timestamp": "2026-03-09T17:05:26.053827",
+    "platform": "Linux-6.18.13-arch1-1-x86_64-with-glibc2.43",
+    "processor": "",
+    "python_version": "3.12.12",
+    "cpu_count": 12,
+    "physical_cores": 6,
+    "logical_cores": 12,
+    "total_ram_gb": 31.13434600830078,
+    "available_ram_gb": 28.301746368408203
+  },
+  "benchmarks": {
+    "cpu_single_core_fibonacci": {
+      "test": "Fibonacci(35)",
+      "time_seconds": 1.4600838009973813,
+      "result": 9227465
+    },
+    "cpu_multi_core": {
+      "test": "Processamento Paralelo",
+      "workers": 12,
+      "time_seconds": 11.147840974997962,
+      "tasks_completed": 12
+    },
+    "numpy_matmul": {
+      "test": "Multiplica\u00e7\u00e3o de matrizes 2000x2000",
+      "time_seconds": 0.11941598100020201,
+      "matrix_size": 2000
+    },
+    "sklearn_random_forest": {
+      "test": "Random Forest (100 trees, 10k samples, 100 features)",
+      "training_time_seconds": 1.008807739999611,
+      "prediction_time_seconds": 0.034377634001430124,
+      "accuracy": 1.0
+    },
+    "sklearn_logistic_regression": {
+      "test": "Logistic Regression (digits dataset)",
+      "training_time_seconds": 0.29786106900064624,
+      "accuracy": 0.9988870339454646
+    },
+    "pandas_operations": {
+      "test": "Pandas - groupby, correlation, describe (100k rows)",
+      "time_seconds": 0.04221164599948679,
+      "rows": 100000
+    }
+  }
+}
