@@ -228,12 +228,16 @@ class MLBenchmark:
         if not HAS_TORCH:
             print("\n🔹 Teste 6: PyTorch Neural Network - PULADO (não instalado)")
             return None
-        
+
         print("\n🔹 Teste 6: PyTorch - Neural Network Training")
-        
-        # Configurar device
-        device = torch.device("mps" if torch.backends.mps.is_available() else 
-                            "cuda" if torch.cuda.is_available() else "cpu")
+
+        # Configurar device (MPS para Mac, CUDA para Dell, CPU fallback)
+        if hasattr(torch.backends, "mps") and torch.backends.mps.is_available():
+            device = torch.device("mps")
+        elif torch.cuda.is_available():
+            device = torch.device("cuda")
+        else:
+            device = torch.device("cpu")
         print(f"   Device: {device}")
         
         # Gerar dados
