@@ -19,6 +19,7 @@ dependencies = [
     { name = "pandas" },
     { name = "psutil" },
     { name = "scikit-learn" },
+    { name = "torch" },
 ]
 
 [package.optional-dependencies]
@@ -36,6 +37,7 @@ requires-dist = [
     { name = "pandas", specifier = ">=2.2" },
     { name = "psutil", specifier = ">=5.9" },
     { name = "scikit-learn", specifier = ">=1.4" },
+    { name = "torch", specifier = ">=2.10.0" },
     { name = "torch", marker = "extra == 'cuda'", specifier = ">=2.2" },
     { name = "torch", marker = "extra == 'mps'", specifier = ">=2.2" },
 ]

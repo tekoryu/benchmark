@@ -352,8 +352,15 @@ class MLBenchmark:
         
         return self.results
     
-    def save_results(self, filename="benchmark_results.json"):
+    def save_results(self, filename=None):
         """Salva resultados em JSON"""
+        if filename is None:
+            # Use computer name to avoid overwrites
+            computer_name = platform.node()
+            output_dir = Path("output")
+            output_dir.mkdir(exist_ok=True)
+            filename = output_dir / f"{computer_name}.json"
+
         output_path = Path(filename)
         with open(output_path, 'w') as f:
             json.dump(self.results, f, indent=2)

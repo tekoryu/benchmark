@@ -1,6 +1,6 @@
 {
   "system_info": {
-    "timestamp": "2026-03-10T10:02:29.524608",
+    "timestamp": "2026-03-10T10:11:22.021030",
     "platform": "Linux-6.18.13-arch1-1-x86_64-with-glibc2.43",
     "processor": "",
     "python_version": "3.12.12",
@@ -8,45 +8,45 @@
     "physical_cores": 6,
     "logical_cores": 12,
     "total_ram_gb": 31.13434600830078,
-    "available_ram_gb": 27.139629364013672
+    "available_ram_gb": 27.45610809326172
   },
   "benchmarks": {
     "cpu_single_core_fibonacci": {
       "test": "Fibonacci(35)",
-      "time_seconds": 1.4417862400005106,
+      "time_seconds": 1.4372231279994594,
       "result": 9227465
     },
     "cpu_multi_core": {
       "test": "Processamento Paralelo",
       "workers": 12,
-      "time_seconds": 11.636433423991548,
+      "time_seconds": 11.719656184010091,
       "tasks_completed": 12
     },
     "numpy_matmul": {
       "test": "Multiplica\u00e7\u00e3o de matrizes 2000x2000",
-      "time_seconds": 0.1323884529992938,
+      "time_seconds": 0.14883145899511874,
       "matrix_size": 2000
     },
     "sklearn_random_forest": {
       "test": "Random Forest (100 trees, 10k samples, 100 features)",
-      "training_time_seconds": 1.0401082369935466,
-      "prediction_time_seconds": 0.02397961499809753,
+      "training_time_seconds": 1.0535556770046242,
+      "prediction_time_seconds": 0.03480669100827072,
       "accuracy": 1.0
     },
     "sklearn_logistic_regression": {
       "test": "Logistic Regression (digits dataset)",
-      "training_time_seconds": 0.16481068599387072,
+      "training_time_seconds": 0.21497919299872592,
       "accuracy": 0.9988870339454646
     },
     "pytorch_nn": {
       "test": "Neural Network (5000 samples, 10 epochs)",
       "device": "cuda",
-      "training_time_seconds": 0.09029122599167749,
-      "final_loss": 0.6823213696479797
+      "training_time_seconds": 0.0896963660052279,
+      "final_loss": 0.6836575865745544
     },
     "pandas_operations": {
       "test": "Pandas - groupby, correlation, describe (100k rows)",
-      "time_seconds": 0.022834417992271483,
+      "time_seconds": 0.022739546009688638,
       "rows": 100000
     }
   }
